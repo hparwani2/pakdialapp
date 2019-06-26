@@ -1,0 +1,306 @@
+.fltleft, .wrapper {
+    float: left;
+}
+
+.wrapper {
+    width: 100%;
+}
+.dn {
+    display: none !important;
+}
+
+.fadeOutDown {
+    animation-name: fadeOutDown;
+}
+.toaster {
+    padding: 22px;
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    z-index: 12;
+}
+.innertoasterdiv2 {
+    background: #fff;
+    box-shadow: 0 2px 5px 1px #cacaca;
+    color: #424242;
+}
+
+.innertoasterdiv, .innertoasterdiv2 {
+    padding: 10px;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 15px;
+}
+.innertoasterdiv {
+    background: #2f2f2f;
+    padding: 10px;
+    border-radius: 40px;
+    text-align: center;
+    color: #f3f1f1;
+    font-size: 15px;
+    box-shadow: 0px 0px 4px 2px #ccc;
+}
+.hdrMain {
+    position: relative;
+    z-index: 3;
+}
+.hdrfirst {
+    width: 100%;
+    background: #fff;
+    height: 47px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: table;
+    table-layout: fixed;
+}
+.hdrleftWpr {
+    display: table-cell;
+    vertical-align: middle;
+    width: 30px;
+}
+.hdrbkarrow {
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    left: -7px;
+    background: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/thdrbackicn_new.svg) no-repeat;
+}
+.hdrjdlogoWpr {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.hdrjdtext {
+    color: #414e5a;
+    font-size: 15px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: inline-block;
+}
+.hdrightWpr {
+    text-align: right;
+}
+.hdrightWpr, .hdrmdleWpr {
+    display: table-cell;
+    vertical-align: middle;
+    width: 30px;
+}
+.hdrnoftnWpr {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.hdrnoftn {
+    width: 26px;
+    height: 26px;
+    display: block;
+    background: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/thdrnotificationicn.svg) no-repeat;
+}
+.loaderwrapper, .spinner {
+    text-align: center;
+}
+.loaderwrapper .spinner {
+    box-shadow: 0 0 9px -1px rgba(0,0,0,.65);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+
+.spinner {
+    display: inline-block;
+}
+.loaderwrapper, .spinner {
+    text-align: center;
+}
+.spinner svg {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.ldrbxshdw {
+    will-change: transform;
+}
+.qp-circular-loader {
+    animation-iteration-count: infinite;
+}
+
+.qp-circular-loader, .qp-circular-loader * {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+.qp-circular-loader {
+    width: 64px;
+    height: 64px;
+    stroke-width: 3px;
+}
+.qp-circular-loader-path{
+    animation-name: fillunfill,rot,colors;
+    animation-duration: 1333ms,5332ms,5332ms;
+    animation-iteration-count: infinite,infinite,infinite;
+    animation-timing-function: cubic-bezier(.4,0,.2,1),steps(4),linear;
+    animation-play-state: running,running,running;
+    animation-fill-mode: forwards;
+}
+.qp-circular-loader, .qp-circular-loader * {
+    transform-origin: 50% 50%;
+}
+
+.qp-circular-loader-path {
+    stroke-dasharray: 58.9;
+    stroke-dashoffset: 58.9;
+}
+.hdrdivider {
+    width: 100%;
+    height: 6px;
+    /* background-image: linear-gradient(to top, #f7f7f7, #e5e5e5); */
+    background: #efeff4;
+    border-top: 1px solid #c8c8cd;
+    position: relative;
+}
+.sndEnqTitlBx, .sndEnqTitlBx span {
+    font-weight: 500;
+}
+
+.sndEnqTitlBx {
+    height: auto;
+    padding: 15px 18px;
+    color: #414e5a;
+    border-bottom: 1px solid #e4eaef;
+}
+.sndEnqFormBx {
+    float: left;
+    display: block;
+    padding: 10px 18px;
+    width: 100%;
+}
+.sndEnqtblBx tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.sndEnqtblBx tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.font12 {
+    font-size: calc(12px + 0.3vw);
+}
+label.sndEnqlbelBx:after {
+    color: #788798;
+    content: "*";
+}
+.sndEnqlbelBx {
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    padding-right: 13px;
+    cursor: default;
+    font-size: 11px;
+}
+.sndEnqtblBx tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.sndEnqtdBx2 {
+    padding: 2px 0;
+}
+.sndEnqtdBx2 input {
+    border: 0;
+    color: #363d43;
+    font-size: 14px;
+    border-bottom: 1px solid #e4eaef;
+    width: 100%;
+    padding: 0 0 8px;
+    margin: 0 0 10px;
+}
+.sndEnqtdBx1 {
+    color: #788798;
+}
+.font12 {
+    font-size: calc(12px + 0.3vw);
+}
+.sndEnqlbelBx {
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    padding-right: 13px;
+    cursor: default;
+}
+.sndEnqtblBx tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.sndEnqtdBx2 {
+    padding: 2px 0;
+}
+.sndEnqlbelBx2 {
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    padding-right: 13px;
+    cursor: default;
+}
+.sndEnqtdBx2 {
+    padding: 2px 0;
+}
+.sndEnqNotBx {
+    font-size: 11px;
+    color: #7d7d7d;
+    text-align: center;
+    margin-top: 11px;
+}
+.bsndEnqSubBtn {
+    width: 100%;
+    float: left;
+    padding: 10px 18px;
+    text-align: center;
+}
+.bsndEnqSubBtn input {
+    width: 100%;
+    height: 42px;
+    border-radius: 4px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    background: #259004;
+    color: #fff;
+}
+.bestdltxt {
+    font-weight: 500;
+    color: #414e5a;
+    padding: 0 18px;
+    margin: 20px 0 0;
+    float: left;
+    width: 100%;
+}
+.sndEnqNotTicLiWrp {
+    padding: 5px 18px;
+    color: #2f2f2f;
+    float: left;
+}
+.sndEnqNotTicLi {
+    width: 100%;
+    float: left;
+    display: block;
+}
+.sndEnqNotTicicBx {
+    background: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/tcheckmarkgry.svg) no-repeat 0;
+    width: 14px;
+    height: 11px;
+    display: inline-block;
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+}
+.sndEnqNotTicLablBx {
+    color: #a8b3be;
+}

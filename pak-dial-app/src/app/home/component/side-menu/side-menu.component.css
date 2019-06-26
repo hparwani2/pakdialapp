@@ -1,0 +1,406 @@
+.menuwrpr, .prflsctn {
+    float: left;
+    width: 100%;
+    background: #fff;
+}
+.menuwrpr {
+    padding: 0 0 0 30px;
+}
+.dn {
+    display: none !important;
+}
+.fadeInUpBig {
+    animation-name: fadeInUpBig;
+}
+.toaster {
+    padding: 22px;
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    z-index: 12;
+}
+.hdrMain {
+    position: relative;
+    z-index: 3;
+}
+.innertoasterdiv2 {
+    background: #fff;
+    color: #595e66;
+    box-shadow: 0 2px 5px 1px #cacaca;
+    color: #424242;
+}
+.innertoasterdiv, .innertoasterdiv2 {
+    padding: 10px;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 15px;
+}
+.hdrfirst {
+    width: 100%;
+    background: #fff;
+    height: 47px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: table;
+    table-layout: fixed;
+}
+.hdrleftWpr {
+    display: table-cell;
+    vertical-align: middle;
+    width: 30px;
+}
+.hdrbkarrow {
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    left: -7px;
+    background: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/thdrbackicn_new.svg) no-repeat;
+}
+.fadeInUpmovie ul{
+    padding: 0px !important;
+}
+.hdrjdlogoWpr {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.hdrjdtext {
+    color: #414e5a;
+    font-size: 15px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: inline-block;
+}
+.hdrightWpr {
+    text-align: right;
+}
+.hdrightWpr, .hdrmdleWpr {
+    display: table-cell;
+    vertical-align: middle;
+    width: 30px;
+}
+.innertoasterdiv {
+    background: #2f2f2f;
+    padding: 10px;
+    border-radius: 40px;
+    text-align: center;
+    color: #f3f1f1;
+    font-size: 15px;
+    box-shadow: 0px 0px 4px 2px #ccc;
+}
+.loaderwrapper, .spinner {
+    text-align: center;
+}
+.spinner {
+    display: inline-block;
+}
+.loaderwrapper .spinner {
+    box-shadow: 0 0 9px -1px rgba(0,0,0,.65);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+.spinner svg {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 8px;
+}
+.ldrbxshdw {
+    will-change: transform;
+}
+.qp-circular-loader {
+    /* -webkit-animation-name: rotate; */
+    animation-name: rotate;
+    /* -webkit-animation-duration: 1568.63ms; */
+    animation-duration: 1568.63ms;
+    /* -webkit-animation-iteration-count: infinite; */
+    animation-iteration-count: infinite;
+    /* -webkit-animation-timing-function: linear; */
+    animation-timing-function: linear;
+}
+.qp-circular-loader {
+    width: 64px;
+    height: 64px;
+    stroke-width: 3px;
+}
+.animated {
+    -webkit-transition: all 0.5s ease;
+    /* -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease; */
+}
+.fadeInUpmovie {
+    animation-name: fadeInUpmovie;
+}
+.fadeInUpmovie ul{
+    padding: 0px !important;
+}
+.animated {
+    animation-duration: 0.7s;
+    animation-fill-mode: both;
+}
+.menuwrpr, .prflsctn {
+    float: left;
+    width: 100%;
+    background: #fff;
+}
+.prfltbl {
+    display: table;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 15px 15px 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.frstd {
+    width: 60px;
+    padding-right: 20px;
+}
+.prfltd {
+    display: table-cell;
+    vertical-align: middle;
+}
+.prflpic, .prflpic span {
+    border-radius: 50%;
+    display: block;
+}
+
+.prflpic {
+    width: 60px;
+    height: 60px;
+    background: #eee;
+}
+.prflpic span {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.prflpic, .prflpic span {
+    border-radius: 50%;
+    display: block;
+}
+.prfltd {
+    display: table-cell;
+    vertical-align: middle;
+}
+.mobn, .nm {
+    display: block;
+}
+
+.nm {
+    font-size: 16px;
+    color: #2d2d2d;
+}
+.lastd {
+    width: 15px;
+    padding-left: 15px;
+}
+
+.prfltd {
+    display: table-cell;
+    vertical-align: middle;
+}
+.arrowrgt {
+    background: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot/details_arrow.svg) no-repeat;
+    width: 15px;
+    height: 15px;
+    background-size: 100% auto;
+    display: inline-block;
+    text-align: right;
+}
+.navlist, .navlist ul {
+    float: left;
+    width: 100%;
+}
+.navlist li {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    color: #363d43;
+    padding: 18px 15px 18px 0;
+    box-sizing: border-box;
+}
+
+.font15 {
+    font-size: 15px;
+}
+.tdspan:first-child {
+    width: 39px;
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+.tdspan {
+    display: table-cell;
+    vertical-align: middle;
+}
+.jdprofilefavourites {
+    background-image: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/lhs_favourites.svg);
+}
+
+.jdsidemenu {
+    width: 18px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.tdspan {
+    display: table-cell;
+    vertical-align: middle;
+}
+.tdspan:last-child {
+    width: 15px;
+    padding-right: 0;
+}
+
+.dn {
+    display: none !important;
+}
+
+.tdspan {
+    vertical-align: middle;
+}
+.navlist li:last-child {
+    border-bottom: 0;
+}
+
+.navlist li {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    color: #363d43;
+    padding: 18px 15px 18px 0;
+    box-sizing: border-box;
+}
+.font15 {
+    font-size: 15px;
+}
+.tdspan:first-child {
+    width: 39px;
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+.tdspan {
+    display: table-cell;
+    vertical-align: middle;
+}
+.jdprofilesaved {
+    background-image: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/lhs_saveitems.svg);
+}
+
+.jdsidemenu {
+    width: 18px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.tdspan:last-child {
+    width: 15px;
+    padding-right: 0;
+}
+.hdrsingledivider.floatlft {
+    float: left;
+}
+.hdrsingledivider {
+    width: 100%;
+    height: 1px;
+    background-color: #e4eaef;
+}
+.hdrsingledivider {
+    width: 100%;
+    height: 1px;
+    background-color: #e4eaef;
+}
+.navlist, .navlist ul {
+    float: left;
+    width: 100%;
+}
+.navlist li {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    color: #363d43;
+    padding: 18px 15px 18px 0;
+    box-sizing: border-box;
+}
+.jdmyinterests {
+    background-image: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/lhs_myinterests.svg);
+}
+
+.jdsidemenu {
+    width: 18px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.tdspan:last-child {
+    width: 15px;
+    padding-right: 0;
+}
+.navlist li:last-child {
+    border-bottom: 0;
+}
+
+.navlist li {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    color: #363d43;
+    padding: 18px 15px 18px 0;
+    box-sizing: border-box;
+}
+.tdspan:last-child {
+    width: 15px;
+    padding-right: 0;
+}
+
+.hdrsingledivider {
+    width: 100%;
+    height: 1px;
+    background-color: #e4eaef;
+}
+.mailicon {
+    background-image: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/lhs_feedback.svg);
+}
+.jdadvertise {
+    background-image: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/lhs_advertise.svg);
+}
+.help {
+    background-image: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/lhs_helpsupport.svg);
+}
+.jdaboutus {
+    background-image: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/lhs_about.svg);
+}
+.jdprivacysettings {
+    background-image: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/lhs_privacy.svg);
+}
+.jdmore {
+    background-image: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/lhs_others.svg);
+}
+.jdlogout {
+    background-image: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/lhs_signout.svg);
+}
+.jdmytransactions {
+    background-image: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/lhs_mytransactions.svg);
+}
+.jdlistyourbusiness {
+    background-image: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/lhs_listyourbusiness.svg);
+}

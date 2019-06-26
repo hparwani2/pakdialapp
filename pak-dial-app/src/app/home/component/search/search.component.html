@@ -1,0 +1,68 @@
+
+    <ng-template #itemTemplateStatic let-item>
+      <a [innerHTML]="item" (click)="searchItem(item)"></a>
+    </ng-template>
+
+    <ng-template #notFoundTemplate let-notFound>
+      <div [innerHTML]="notFound"></div>
+    </ng-template> 
+
+<div class="hdrUnvrsl">
+  <div id="fixhdrdiv" class="">
+    <header id="headerFixed" class="hdrMain">
+      <div class="hdrfirst ">
+        <div class="hdrleftWpr" (click)="backArray()">
+          <span class="hdrbkarrow transform11"></span>
+        </div>
+        <div class="hdrleftWpr pointer"><span id="left_btn2"></span></div>
+        <div class="hdrjdlogoWpr">
+          <span class="hdrjdtext" id="middle_btn">Social</span>
+        </div>
+        <div class="hdrmdleWpr" id="right_btn2">
+          <span class="sfjdshare"></span>
+        </div>
+        <div routerLink="notification" class="hdrightWpr" id="right_wrpr">
+          <div id="right_btn">
+            <div class="hdrnoftnWpr">
+              <span class="hdrnoftn transform11"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hdrsecond" id="sclinphdr" style="padding-top: 5px;">
+        <div class="hdrsrchMain" id="sclinputhdr">
+          <div class="hdrsrchWpr" id="_srchinput">
+            <span class="hdrsrchIcnWpr" 
+              ><span class="hdrsrchIconlight transform11"></span
+            ></span>
+            <div class="hdrsrchInptWpr search-shadow">
+                    <ng-autocomplete #ngAutoCompleteStatic
+                    class = "srch-inpts"
+                    [data]="countriesTemplate"
+                    name="name"
+                    [(ngModel)]="searchKey"
+                    [initialValue]=""
+                    [placeHolder]="placeholder"
+                    [searchKeyword]="keyword"
+                    historyIdentifier="countriesTemplateList"
+                    [historyHeading]="historyHeading"
+                    historyListMaxNumber="3"
+                    notFoundText="Not found"
+                    [itemTemplate]="itemTemplateStatic"
+                    [notFoundTemplate]="notFoundTemplate">
+                    </ng-autocomplete>
+                    <!-- <input  class = "srch-inpts"
+                    /> -->
+              <span
+                id="sclemptySrch"
+                class="jdcrossicon transform11"
+                style="right: 35px; display: none; z-index: 2;"
+              ></span
+              ><span id="sclmicicon" class="hdrmikeIcon transform11"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+</div>

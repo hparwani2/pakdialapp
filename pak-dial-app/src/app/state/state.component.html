@@ -1,0 +1,31 @@
+<div class="upper-full-wrap">
+  <div class="container">
+    <div class="upper-real-esate">
+      <div class="left-real-esate">
+        <a (click)="backArrow()" routerLinkActive="active"><i class="fas fa-angle-left"></i></a>
+      </div>
+      <div class="center-real-esate">
+        <span>{{responses?.cat_info?.category_name}}</span>
+      </div>
+      <div class="right-real-esate">
+        <a routerLink="/notification" routerLinkActive="active"><i class="far fa-bell"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="category-list">
+  <div class="container">
+    <ul>
+      <li style="cursor: pointer !important;" *ngFor="let response of responses?.sub_cat_list" (click)="ItemClicked($event,response)">
+          <span class="left-img-ul">
+            <img class="img-fluid" src="http://pakdial.com/{{response.icon_image}}">
+          </span>
+           <span class="category-name-text">
+            {{response.category_name}}
+          </span>
+          <span class="right-angle"><i class="fas fa-angle-right"></i></span>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+
+
+<div class="upper-full-wrap">
+    <div class="container">
+      <div class="upper-real-esate">
+        <div class="left-real-esate">
+          <a  (click)="common.clickableFunction('back')" routerLinkActive="active"><i class="fas fa-angle-left"></i></a>
+        </div>
+        <div class="center-real-esate">
+          <span>Favourites</span>
+        </div>
+        <div class="right-real-esate">
+          <a routerLink="/notification" routerLinkActive="active"><i class="far fa-bell"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+<div class="loaction-section">
+    <div class="inner-loaction-sec pointer!" style="
+    cursor: pointer !important;" *ngFor="let response of responces" >
+      <div class="image-location pointer">
+        <img *ngIf="response.premium_banner != ''"class="img-fluid" src="http://pakdial.com/{{response.premium_banner}}">
+        <img *ngIf="response.premium_banner == ''"class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png">
+      
+      </div>
+      <div class="right-cntent-sec">
+        <h4 >{{response.company_name}}</h4>
+        <div class="adress">
+          <p class="loacality">
+            <i class="fas fa-map-marker-alt"></i>
+             {{response.website}}
+             <br/>
+            <span>{{response.email}}</span>
+          </p>
+          
+        </div>
+       
+      </div>
+      <div class="third-cntent-sec">
+        <button class="cal-btn">
+          <i class="fas fa-phone"></i> Call 
+        </button>
+      </div>
+    </div>
+</div>
+<app-footer></app-footer>

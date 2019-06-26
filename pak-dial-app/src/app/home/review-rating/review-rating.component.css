@@ -1,0 +1,386 @@
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset, label { margin: 0; padding: 0; }
+body{ margin: 20px; }
+h1 { font-size: 1.5em; margin: 10px; }
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+.fltleft, .wrapper {
+    float: left;
+}
+
+.wrapper {
+    width: 100%;
+}
+.dn {
+    display: none !important;
+}
+
+.fadeOutDown {
+    animation-name: fadeOutDown;
+}
+.toaster {
+    padding: 22px;
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    z-index: 12;
+}
+.dn {
+    display: none !important;
+}
+.innertoasterdiv {
+    background: #2f2f2f;
+    padding: 10px;
+    border-radius: 40px;
+    text-align: center;
+    color: #f3f1f1;
+    font-size: 15px;
+    box-shadow: 0px 0px 4px 2px #ccc;
+} 
+.hdrMain {
+    position: relative;
+    z-index: 3;
+}
+.hdrfirst {
+    width: 100%;
+    background: #fff;
+    height: 47px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: table;
+    table-layout: fixed;
+}
+.hdrleftWpr {
+    display: table-cell;
+    vertical-align: middle;
+    width: 30px;
+}
+.hdrbkarrow {
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    left: -7px;
+    background: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/thdrbackicn_new.svg) no-repeat;
+}
+.hdrjdlogoWpr {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.hdrjdtext {
+    color: #414e5a;
+    font-size: 15px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: inline-block;
+}
+.hdrightWpr {
+    text-align: right;
+}
+
+.hdrightWpr, .hdrmdleWpr {
+    display: table-cell;
+    vertical-align: middle;
+    width: 30px;
+}
+.hdrnoftnWpr {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.hdrnoftn {
+    width: 26px;
+    height: 26px;
+    display: block;
+    background: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot_072018/thdrnotificationicn.svg) no-repeat;
+}
+.loaderwrapper, .spinner {
+    text-align: center;
+}
+.loaderwrapper .spinner {
+    box-shadow: 0 0 9px -1px rgba(0,0,0,.65);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+
+.spinner {
+    display: inline-block;
+}
+.spinner svg {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.ldrbxshdw {
+    will-change: transform;
+}
+.qp-circular-loader {
+    width: 64px;
+    height: 64px;
+    stroke-width: 3px;
+}
+.wrpr {
+    width: 100%;
+    float: left;
+}
+.cmpnyvw {
+    padding: 10px 15px;
+    background: rgb(255, 255, 255);
+}
+.cmpnyvw, .writeareviw {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+.cmpnynam {
+    float: left;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #4b4b4b;
+}
+.cmpnynam, .witebtn {
+    width: 100%;
+    box-sizing: border-box;
+}
+.writeareviw {
+    display: table;
+    /*padding-bottom: 105px;*/
+    background: #f4f4f4;
+}
+
+.writrating {
+    padding: 10px 15px;
+    margin: 10px 0;
+}
+
+
+.ratparts {
+    float: left;
+    width: 100%;
+    /*margin: 10px 0;*/
+}
+.writrating .rattxt {
+    float: left;
+    width: 110px;
+    font-size: 14px;
+    line-height: 40px;
+    color: #757575;
+    font-weight: 600;
+}
+.ratnum {
+    color: #424242;
+}
+.ratstars {
+    float: left;
+    width: 60%;
+}
+.dpotr {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.dpotr .dprating {
+    width: 18%;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 2%;
+    border-radius: 5px;
+    display: inline-block;
+}
+.rating__background {
+    fill: transparent;
+    stroke-width: 1;
+    height: 100%;
+    width: 100%;
+}
+.rating__value {
+    fill: #fb832b;
+    height: 100%;
+}
+.displayBlock {
+    display: block;
+}
+.writtxtarea {
+    float: left;
+    width: 100%;
+    margin: 25px 0 0;
+    position: relative;
+}
+.writtxtarea input {
+    font-family: Roboto,sans-serif;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    outline: none;
+    resize: none;
+    padding: 0 25px 0 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    text-transform: capitalize;
+}
+.mobstartnum {
+    position: absolute;
+    color: #000;
+    font-size: 14px;
+    top: 7px;
+    left: 6px;
+}
+.writtxtarea .yournametxt {
+    padding: 0 0 0 40px;
+}
+.writtxtarea textarea {
+    font-family: Roboto,sans-serif;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    outline: none;
+    resize: none;
+    padding: 0 25px 0 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.writtxtarea .icon-camera_rating {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    background: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot/JD_SF_Gallery.svg) no-repeat 5px;
+    background-size: 20px 20px;
+    height: 22px;
+}
+.upload{
+    overflow: hidden;
+    font-size: 20px;
+    border-radius: 50px;
+    float: right;
+}
+.uploadFiles, .uploadFiles1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+}
+.writefacebok {
+    padding: 15px;
+}
+
+.writefacebok, .writrating {
+    float: left;
+    width: 100%;
+    background: #fff;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.facicn {
+    margin-right: 10px;
+}
+
+.fltleft {
+    float: left;
+}
+.icon-jd_whitefacebook {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 25px;
+    background: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot/jd_facebook_share.svg) no-repeat 5px;
+    background-size: 100% 100%;
+    height: 25px;
+    background-position: 0;
+}
+span.shrtxt {
+    font-size: 14px;
+    color: #666;
+    line-height: 25px;
+}
+.shrfacbk input[type=checkbox] {
+    display: none;
+}
+.shrfacbk input[type=checkbox]+.chkotr {
+    float: right;
+    width: 22px;
+    height: 22px;
+    border-radius: 0;
+    position: relative;
+    background: url(https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot/tick2.svg);
+    background-position: 0;
+    background-size: 100% 100%;
+}
+.writefixedbtn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 5px;
+    box-sizing: border-box;
+    border-top: 1px solid #e4eaef;
+}
+
+.witebtn {
+    background: #13820c;
+    border: 0;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 15px;
+    z-index: 1;
+    border-radius: 3px;
+}

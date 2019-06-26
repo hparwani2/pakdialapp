@@ -1,0 +1,249 @@
+<div id="root">
+  <div>
+    <div>
+      <div>
+        <div class="wrapper" id="appWrapper">
+          <div id="toaster" class="toaster dn fadeInUpBig">
+            <div id="innertoasterdiv2" class="innertoasterdiv2"></div>
+            <div id="innertoasterdiv" class="innertoasterdiv"></div>
+          </div>
+          <div class="hdrUnvrsl">
+            <div id="fixhdrdiv" class="">
+              <header id="headerFixed" class="hdrMain">
+                <div class="hdrfirst ">
+                  <div class="hdrleftWpr pointer" routerLink="/">
+                    <span class="hdrbkarrow transform11"></span>
+                  </div>
+                  <div class="hdrjdlogoWpr">
+                    <span class="hdrjdtext" id="middle_btn">Profile</span>
+                  </div>
+                  <div class="hdrightWpr" id="right_wrpr">
+                    <div id="right_btn"><span class=""></span></div>
+                  </div>
+                </div>
+              </header>
+              <div class="hdrsingledivider"></div>
+            </div>
+          </div>
+          <div id="shell">
+            <div style="display: none;">
+              <div
+                match="[object Object]"
+                location="[object Object]"
+                history="[object Object]"
+                route="[object Object]"
+                style="padding-top: 125px;"
+              >
+                <div class="loaderwrapper">
+                  <div class="spinner">
+                    <svg
+                      class="ldrbxshdw"
+                      version="1"
+                      width="48"
+                      height="48"
+                      viewBox="0 0 28 28"
+                    >
+                      <g class="qp-circular-loader">
+                        <path
+                          class="qp-circular-loader-path"
+                          fill="none"
+                          d="M14 1.5A12.5 12.5 0 1 1 1.5 14"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="menuwrpr">
+                <div class="prflsctn animated fadeInUpmovie">
+                  <div class="prfltbl ">
+                    <span class="prfltd frstd"
+                      ><span class="prflpic"
+                        ><span
+                          style='background-image: url("https://akam.cdn.jdmagicbox.com/images/icontent/newwap/prot/profiledefault.png");'
+                        ></span></span></span
+                    ><span class="prfltd">
+                      <span *ngIf="loginStatus" class="nm">{{data.user_email}}</span>
+                      <span *ngIf="!loginStatus" class="nm"><a routerLink="../login" >Sign in</a></span>
+
+                      
+                      </span
+                    ><span class="prfltd lastd"
+                      ><span class="arrowrgt"></span
+                    ></span>
+                  </div>
+                </div>
+                <div class="navlist animated fadeInUpmovie">
+                  <ul class="animated fadeInUpmovie">
+                    <li class="font15" (click)="pageChange('favourites')">
+                      <span class="tdspan"
+                        ><span
+                          class="jdsidemenu jdprofilefavourites transform11"
+                        ></span></span
+                      ><span class="tdspan">Favourites</span
+                      ><span class="tdspan dn"
+                        ><span class="arrowrgt transform11"></span
+                      ></span>
+                    </li>
+                    <li class="font15" (click)="pageChange('savedItems')">
+                      <span class="tdspan"
+                        ><span
+                          class="jdsidemenu jdprofilesaved transform11"
+                        ></span></span
+                      ><span class="tdspan">Saved Items</span
+                      ><span class="tdspan dn"
+                        ><span class="arrowrgt transform11"></span
+                      ></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="hdrsingledivider floatlft"></div>
+                <div class="navlist animated fadeInUpmovie">
+                  <ul class="animated fadeInUpmovie">
+                    <!-- <li class="font15">
+                      <span class="tdspan"
+                        ><span
+                          class="jdsidemenu jdmyinterests transform11"
+                        ></span></span
+                      ><span class="tdspan">My Interests</span
+                      ><span class="tdspan dn"
+                        ><span class="arrowrgt transform11"></span
+                      ></span>
+                    </li> -->
+                    <li class="font15" (click)="pageChange('myTransaction')">
+                      <span class="tdspan"
+                        ><span
+                          class="jdsidemenu jdmytransactions transform11"
+                        ></span></span
+                      ><span class="tdspan">My Transaction</span
+                      ><span class="tdspan dn"
+                        ><span class="arrowrgt transform11"></span
+                      ></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="hdrsingledivider floatlft"></div>
+                <div class="navlist animated fadeInUpmovie">
+                  <ul class="animated fadeInUpmovie">
+                    <!-- <li class="font15">
+                      <span class="tdspan"
+                        ><span
+                          class="jdsidemenu mailicon transform11"
+                        ></span></span
+                      ><span class="tdspan" style="position: relative;"
+                        >Feedback</span
+                      ><span class="tdspan dn"
+                        ><span class="arrowrgt transform11"></span
+                      ></span>
+                    </li> -->
+                    <li class="font15" (click)="pageChange('freeListing')">
+                      <span class="tdspan"
+                        ><span
+                          class="jdsidemenu jdlistyourbusiness transform11"
+                        ></span></span
+                      ><span class="tdspan">List a Business</span
+                      ><span class="tdspan dn"
+                        ><span class="arrowrgt transform11"></span
+                      ></span>
+                    </li>
+                    <li class="font15" (click)="pageChange('advertise')">
+                      <span class="tdspan"
+                        ><span
+                          class="jdsidemenu jdadvertise transform11"
+                        ></span></span
+                      ><span class="tdspan">Advertise</span
+                      ><span class="tdspan dn"
+                        ><span class="arrowrgt transform11"></span
+                      ></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="hdrsingledivider floatlft"></div>
+                <div class="navlist animated fadeInUpmovie">
+                  <ul>
+                    <li class="font15" (click)="pageChange('helpSupport')">
+                      <span class="tdspan"
+                        ><span class="jdsidemenu help transform11"></span></span
+                      ><span class="tdspan">Help &amp; Support</span
+                      ><span class="tdspan dn"
+                        ><span class="arrowrgt transform11"></span
+                      ></span>
+                    </li>
+                    <li class="font15" (click)="pageChange('aboutUs')">
+                      <span class="tdspan"
+                        ><span
+                          class="jdsidemenu jdaboutus transform11"
+                        ></span></span
+                      ><span class="tdspan">About Us</span
+                      ><span class="tdspan dn"
+                        ><span class="arrowrgt transform11"></span
+                      ></span>
+                    </li>
+                    <li class="font15" (click)="pageChange('privacySetting')">
+                      <span class="tdspan"
+                        ><span
+                          class="jdsidemenu jdprivacysettings transform11"
+                        ></span></span
+                      ><span class="tdspan">Saved Items </span
+                      ><span class="tdspan dn"
+                        ><span class="arrowrgt transform11"></span
+                      ></span>
+                    </li>
+                    <!-- <li class="font15">
+                      <span class="tdspan"
+                        ><span
+                          class="jdsidemenu jdmore transform11"
+                        ></span></span
+                      ><span class="tdspan">Login</span
+                      ><span class="tdspan dn"
+                        ><span class="arrowrgt transform11"></span
+                      ></span>
+                    </li> -->
+                  </ul>
+                </div>
+                <div class="hdrsingledivider floatlft"></div>
+                <div class="navlist logintext animated fadeInUpmovie">
+                  <ul>
+                    <li class="font15" *ngIf="!loginStatus;else other"> 
+                      <span class="tdspan"routerLink="../login"
+                        ><span
+                          class="jdsidemenu jdlogout transform11"
+                        ></span></span
+                      ><span class="tdspan">Login</span
+                      ><span class="tdspan dn"
+                        ><span class="arrowrgt transform11"></span
+                      ></span>
+                    </li>
+                  </ul>
+                  <ng-template #other>
+                    <ul>
+                      <li class="font15" > 
+                        <span class="tdspan"
+                          ><span
+                            class="jdsidemenu jdlogout transform11"
+                          ></span></span
+                        ><span (click)="logout()"class="tdspan">Logout</span
+                        ><span class="tdspan dn"
+                          ><span class="arrowrgt transform11"></span
+                        ></span>
+                      </li>
+                    </ul>
+                  </ng-template>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-proxy" id="footerproxy"></div>
+        </div>
+        <div id="overlay" class="mask" style="display: none;">
+          <div class="offline_background">
+            <div class="offline_msg">You are Offline.</div>
+          </div>
+        </div>
+        <div id="jd-model"></div>
+      </div>
+    </div>
+  </div>
+</div>

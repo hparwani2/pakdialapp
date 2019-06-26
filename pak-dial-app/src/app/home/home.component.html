@@ -1,0 +1,87 @@
+<div class="full-wrap" *ngIf="!searchBar else other">
+   <div class="top-sec-wraper">
+        <div class="container">
+            <div class="up-header"> 
+                <div class="left-side">
+                     <!-- Start sidebar nav -->
+                    <div id="mySidenav" class="sidenav">
+                      <div class="profile">
+                        <div class="profile-text">
+                          <span>Profile</span>
+                        </div>
+                        <div class="profile-details">
+                          <div class="media">
+                            <img class="mr-3" src="assets/imges/camera.png" alt="Generic placeholder image">
+                            <div class="media-body">
+                              <h5 class="mt-0">Earl Guerrero</h5>
+                              <p>earlguerrero@gmail.com</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-long-arrow-alt-left"></i></a>
+                      <div class="side-list">
+                        <ul>
+                          <li><i class="far fa-heart"></i><a href="#">Saved Items</a></li>
+                          <li><i class="far fa-heart"></i><a href="#">Saved Items</a></li>
+                          <li><i class="far fa-heart"></i><a href="#">Saved Items</a></li>
+                          <li><i class="far fa-heart"></i><a href="#">Saved Items</a></li>
+                          <li><i class="far fa-heart"></i><a href="#">Saved Items</a></li>
+                          <li><i class="far fa-heart"></i><a href="#">Saved Items</a></li>
+                          <li><i class="far fa-heart"></i><a href="#">Saved Items</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <span style="font-size:30px;cursor:pointer;color:#7e7e7e" (click)="openNav()">&#9776;</span>
+                     <!-- End sidebar nav -->
+                </div>
+                <div class="center-location">
+                  <select>
+                    <option value="volvo">Lahore</option>
+                    <option value="saab">Kranchi</option>
+                    <option value="opel">Islamabad</option>
+                    <option value="audi">Lahore</option>
+                  </select>
+                </div>
+                <div class="right-login-action">
+                    <a *ngIf="!loginStatus"  routerLink="login"><i class="fas fa-user"></i></a>
+                    <a routerLink="notification"><i class="far fa-bell"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="search-wraper">
+  <div class="container">
+      <div class="search">
+                  <form class="example" action="#">
+                    <input class="srch-inpts" (click)="searchBarShow()"type="text" placeholder="Search" name="search">
+                    <button class="srch-btn" type="submit"><i class="fas fa-search"></i></button>
+                  </form>
+      </div> 
+  </div> 
+</div> 
+
+<div class="cat-wraper">
+  <div class="container">
+    <div class="all-category">
+              <ul class="ul-category pointer">              
+              <li class="inner-section " *ngFor="let response of catData" (click)="ItemClicked($event,response,response.category_name)">
+                <div class="cat-img">
+                  <img src="http://pakdial.com/{{response.icon_image}}" class="img-fluid">
+                </div>
+                  <p>{{response.category_name}}</p>
+                </li>                 
+              </ul>                
+    </div>
+  </div>
+</div>
+</div>
+
+<app-footer></app-footer>
+
+
+<ng-template #other>
+  <app-search></app-search>
+</ng-template>

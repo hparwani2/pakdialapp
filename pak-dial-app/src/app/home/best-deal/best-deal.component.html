@@ -1,0 +1,90 @@
+<div class="wrapper" id="appWrapper">
+  <div id="toaster" class="toaster fadeInUpBig dn fadeOutDown">
+    <div id="innertoasterdiv2" class="innertoasterdiv2 dn"></div>
+    <div id="innertoasterdiv" class="innertoasterdiv">Unable to detect location, Please turn on location or type area
+    </div>
+  </div>
+  <div class="hdrUnvrsl">
+    <div id="fixhdrdiv" class="">
+      <header id="headerFixed" class="hdrMain">
+        <div class="hdrfirst ">
+          <div (click)="common.clickableFunction('back')"class="hdrleftWpr pointer"><span class="hdrbkarrow transform11"></span></div>
+          <div class="hdrjdlogoWpr"><span class="hdrjdtext" id="middle_btn">Get Best Deal</span></div>
+          <div class="hdrightWpr" id="right_wrpr" (click)="common.clickableFunction('notification')">
+            <div id="right_btn" >
+              <div class="hdrnoftnWpr"><span class="hdrnoftn transform11"></span></div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="shell">
+    <div style="display: none;">
+      <div match="[object Object]" location="[object Object]" history="[object Object]" route="[object Object]"
+        style="padding-top: 125px;">
+        <div class="loaderwrapper">
+          <div class="spinner"><svg class="ldrbxshdw" version="1" width="48" height="48" viewBox="0 0 28 28">
+              <g class="qp-circular-loader">
+                <path class="qp-circular-loader-path" fill="none" d="M14 1.5A12.5 12.5 0 1 1 1.5 14"></path>
+              </g>
+            </svg></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div>
+          <!-- {{sForm | json}} -->
+          <form (ngSubmit)="saveDeal()">
+          <div class="hdrdivider"></div>
+          <div>
+            <div class="sndEnqTitlBx font12">Fill this form and avail Best Deal from  - &nbsp; {{responces?.listing?.company_name}}
+            </div>
+          </div>
+          <div class="sndEnqFormBx">
+            <table class="sndEnqtblBx" width="100%">
+              <tbody>
+                <tr>
+                  <td class="sndEnqtdBx1"> <label class="sndEnqlbelBx font12">Name</label> </td>
+                </tr>
+                <tr>
+                  <td class="sndEnqtdBx2"><input [(ngModel)]="sForm.name" name="name"type="text" autocorrect="off" autocapitalize="off"
+                      placeholder="Eg. Anamika" class=""></td>
+                </tr>
+                <tr>
+                  <td class="sndEnqtdBx1"> <label class="sndEnqlbelBx font12">Mobile No.</label> </td>
+                </tr>
+                <tr>
+                  <td class="sndEnqtdBx2"><input [(ngModel)]="sForm.mobile" name="mobile"type="tel" maxlength="15" autocorrect="off" autocapitalize="off"
+                      placeholder="Eg. 91xxxxxxxx" class=""></td>
+                </tr>
+                <tr>
+                  <td class="sndEnqtdBx1"> <label class="sndEnqlbelBx2 font12">Email ID</label> </td>
+                </tr>
+                <tr>
+                  <td class="sndEnqtdBx2"><input [(ngModel)]="sForm.email" name="email"id="inputFld" type="email" placeholder="user@user.com"></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="sndEnqNotBx">Note: SMS is free to Indian numbers only</div>
+          </div>
+          <div class="bsndEnqSubBtn"><input type="button" type="submit"class="font16" value="Submit"></div>
+          <div class="bestdltxt font12">How it works?</div>
+          <div class="sndEnqNotTicLiWrp">
+            <div class="sndEnqNotTicLi"><span class="sndEnqNotTicicBx"></span><span class="sndEnqNotTicLablBx font10">
+                Your requirement is sent to select relevant businesses </span></div>
+            <div class="sndEnqNotTicLi"><span class="sndEnqNotTicicBx"></span><span class="sndEnqNotTicLablBx font10">
+                Businesses compete with each other to get you the Best Deal </span></div>
+            <div class="sndEnqNotTicLi"><span class="sndEnqNotTicicBx"></span><span class="sndEnqNotTicLablBx font10">
+                You choose whatever suits you best </span></div>
+            <div class="sndEnqNotTicLi"><span class="sndEnqNotTicicBx"></span><span class="sndEnqNotTicLablBx font10">
+                Contact Info is sent to you by SMS/Email </span></div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>

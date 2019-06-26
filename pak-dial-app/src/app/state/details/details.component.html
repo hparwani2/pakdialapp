@@ -1,0 +1,355 @@
+<div class="full-wrap-details">
+    <header id="headerFixed" class="hdrMain hdrDetail">
+       <div class="hdrfirst ">
+          <div (click)="backArrow()" class="hdrleftWpr pointer">
+             <span class="hdrbkarrow transform11"></span>
+          </div>
+          <div class="hdrleftWpr pointer" (click)="menuOpen()">
+             <span id="left_btn" class="hdrMenu transform11"></span>
+          </div>
+          <div class="hdrjdlogoWpr"></div>
+          <div class="hdrmdleWpr" id="right_btn2"></div>
+          <div class="hdrightWpr" id="right_wrpr">
+             <div id="right_btn">
+                <div (click)="notificationCheck()" class="hdrnoftnWpr pointer">
+                   <span class="hdrnoftn transform11"></span>
+                </div>
+             </div>
+          </div>
+       </div>
+    </header>
+    <owl-carousel-o
+    [options]="customOptions"
+    (translated)="getPassedData($event)"
+    >
+    <ng-container *ngFor="let slide of slidesStore">
+       <ng-template carouselSlide [id]="slide.id">
+          <img [src]="slide.file_url" [alt]="slide.alt" [title]="slide.title" />
+       </ng-template>
+    </ng-container>
+    </owl-carousel-o>
+    <div class="name-prpty">
+       <div class="container">
+             <span class="prp-title">{{ title}}</span>
+             <!-- <star-rating-comp get-half-star-visible="parentCtrl.getHalfStarVisible(rating)" [starType]="'svg'" step="0.5"space="'no'" size="'small'" hoverEnabled="true" label-position="'top'"show-half-stars="true"[rating]="AVG_RATING"></star-rating-comp> -->
+             <span
+             class="fa fa-heart heart"
+             [class.red]="isDisabled"
+             (click)="saveItem($event)"
+             ></span>
+       </div>
+    </div>
+    <div class="content-prpty">
+       <div class="container">
+          <div class="review-ttl">
+             <div class="media">
+                
+                <div class="circle small" data-fill="1" hour style="--color:#4dbd13">
+                     <span>{{ avg }}</span>
+                     <div class="bar"></div>
+                  </div>
+                <div class="media-body body-cnt">
+                   <h6 class="mt-0">
+                      Based on <span>{{ responses?.reviews?.length }} reviews</span>
+                   </h6>
+                   <p >Be first among your friends to rate this</p>
+                </div>
+             </div>
+          </div>
+          <div class="contact-sec">
+                <ul>
+                   <li>
+                      <a href="tel:{{ (responses?.list_phone)[0]?.mobile }}"
+                         ><i style="transform: rotate(90deg);" class="fas fa-phone"></i
+                         ><br />Call</a>
+                   </li>
+                   <li><i class="fas fa-map-marker-alt"></i><br />Directions</li>
+                   <li>
+                      <a href="sms:+918114431733?body=Hi there!"
+                         ><i class="far fa-envelope"></i><br />Message</a
+                         >
+                   </li>
+                   <li>
+                      <i
+                         class="fas fa-share"
+                         data-toggle="modal"
+                         data-target="#myModal"
+                         ></i
+                         ><br />Share
+                   </li>
+                </ul>
+          </div>
+          <div class="best-deal" (click)="bestdealclicked($event)">
+             <button class="bst-deal">Best Deal</button>
+          </div>
+       </div>
+    </div>
+    <div class="overall-rev-section">
+       <div class="container">
+          <div class="left-rew">
+             <i class="far fa-star"></i>
+          </div>
+          <a  routerLinkActive="active">
+             <div class="rev-text">Tap to Rate {{rateValue}}</div>
+             <div class="right-rew">
+                <!-- <bar-rating rate="3" [max]="5"></bar-rating> -->
+                <!-- <span><bar-rating [max]="5" [(ngModel)]="credentials.rating_val" (leave)="ratechanged()"></bar-rating></span> -->
+                <fieldset class="rating">
+                     <input (change)="ratingGet('extra')"  [(ngModel)]="rateValue"type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                     <input (change)="ratingGet('extra')" [(ngModel)]="rateValue" type="radio" id="star4half" name="rating" value="4.5" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                     <input (change)="ratingGet('extra')" [(ngModel)]="rateValue" type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                     <input (change)="ratingGet('extra')" [(ngModel)]="rateValue"type="radio" id="star3half" name="rating" value="3.5" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                     <input (change)="ratingGet('extra')" [(ngModel)]="rateValue" type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                     <input (change)="ratingGet('extra')" [(ngModel)]="rateValue" type="radio" id="star2half" name="rating" value="2.5" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                     <input (change)="ratingGet('extra')" [(ngModel)]="rateValue" type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                     <input (change)="ratingGet('extra')" [(ngModel)]="rateValue" type="radio" id="star1half" name="rating" value="1.5" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                     <input (change)="ratingGet('extra')" [(ngModel)]="rateValue" type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                     <input (change)="ratingGet('extra')" [(ngModel)]="rateValue"type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                 </fieldset>
+             
+               </div>
+          </a>
+       </div>
+    </div>
+    <div class="more-option">
+       <div class="container">
+          <p class="more-text">More Options</p>
+          <div class="img-section-more" *ngFor="let response of responses?.gallery">
+             <img class="img-fluid gallery-img" src="{{response.file_url}}">
+             <p class="gallery-text">Preet Land Promoters</p>
+             <span class="gallery-address">mohali</span>
+             </div>
+       </div>
+    </div>
+    <div class="property-location-details">
+       <div class="container">
+          <ul>
+             <li>
+                <i class="far fa-clock"></i><span>Open Now </span>9.30 am - 6.30 pm
+             </li>
+             <li>
+                <i
+                   class="fas fa-phone rotate-phn"
+                   *ngFor="let response of responses?.list_phone"
+                   >
+                <span class="title-phn"></span>{{ response.mobile }}</i>
+             </li>
+             <li>
+                <i class="far fa-address-book"></i
+                   >{{ (responses?.address)[0].listing_address_id }} &nbsp;{{
+                (responses?.address)[0].l_address
+                }}
+                &nbsp;{{ (responses?.address)[0].pincode }}
+             </li>
+             <a routerLink="/report/{{listingId}}" style="text-decoration: none;" routerLinkActive="active">
+                <li><i class="fas fa-pencil-alt"></i>Edit this listing</li>
+             </a>
+          </ul>
+       </div>
+    </div>
+    <div class="upload-image-section">
+       <div class="container">
+          <div class="uploaded-imgs" *ngFor="let response of responses?.gallery">
+             <img class="img-fluid img-rounded" src="{{ response.file_url }}" />
+          </div>
+          <div class="up-load-btn">
+             <label class="btn-bs-file">
+             <i class="fas fa-cloud-upload-alt"></i> Add Photo
+             <input type="file" />
+             </label>
+          </div>
+       </div>
+    </div>
+    <div class="rating-section">
+       <div class="container">
+          <p class="more-text-rev">Review & Ratings</p>
+          <div class="rating-text">
+             <div class="count-rev">
+                <span>{{ avg }}</span>
+             </div>
+             <div class="total-text-rev">
+                <p>Pd rating index based on <span>2 reviews</span> across the web</p>
+             </div>
+          </div>
+          <div class="first-rev-prsn">
+             <a routerLink="/review-rating" routerLinkActive="active">
+                <p (click)="ratingGet('friend')">Be first among your friends to rate this</p>
+             </a>
+          </div>
+       </div>
+    </div>
+    <div class="all-rating">
+       <div class="container">
+          <!-- <div class="uppr-tabs">
+             <ul>
+               <li>Popular</li>
+             </ul>
+             </div>
+             <div class="cmnt-section-details" *ngFor="let response of responses?.reviews">
+             <div class="comments-sec">
+               <div class="media">
+                 <img class="mr-3 img-fluid" src="http://pakdial.com/{{ response.image }}" />
+                 <div class="media-body">
+                   <p class="cmnter-name">{{ response.user_info.user_firstname }}</p>
+                   <div class="cmnter-review">
+                     <span>
+                       <bar-rating rate="{{ response.rating }}" [max]="5" [readOnly]="true"></bar-rating>
+                     </span>
+                     <span class="cmnter-rev-count">{{ response.rate_desc }}</span>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             </div> -->
+          <div style="width: 100%; float: none;">
+             <!-- <div class="hdrdivider"></div> -->
+             <div class="kReviewRtngBdr" style="display: inline-block; width: 100%;">
+                <div class="kReviewRtngBx kboxset">
+                   <div class="rtngTagBx">
+                      <ul>
+                         <!-- <li class="">Popular</li>
+                            <li class="sclrtngdsbl">Friends Ratings (0)</li>
+                            <li class="">All</li> -->
+                         <li class="">Low to High</li>
+                         <li class="active">High to Low</li>
+                      </ul>
+                   </div>
+                </div>
+                <div
+                   class="wrpfl sclrtngtmb no-margin"
+                   *ngFor="let response of reviews"
+                   >
+                   <div class="wrpfl nmimg" style="table-layout: fixed;">
+                      <span class="cel" style="width: 40px;"
+                         ><span class="img dnmcbg"
+                         ><img
+                         src="http://pakdial.com/{{ response.image }}"
+                         alt=""
+                         id="userphoto1557406860915546"
+                         title=""/></span></span
+                         >
+                      <span class="cel cminfo"
+                         >
+                         <span class="wrpfl"
+                            ><span class="soclboxnm">{{
+                         response.user_info.user_firstname
+                         }}</span></span
+                            >
+                         <span class="wrpfl cmnt"
+                            >
+                            <span class="ratingFeedBox"
+                               >
+                               <span class="ratingFeedStar"
+                                  >
+                                  <svg width="100%" height="100%" viewBox="0 0 1000 200">
+                                     <polygon
+                                        id="star3034"
+                                        points="100,10 40,198 190,78 10,78 160,198"
+                                        fill="#FFE372"
+                                        ></polygon>
+                                     <defs>
+                                        <clipPath id="stars3034">
+                                           <use xlink:href="#star3034"></use>
+                                           <use xlink:href="#star3034" x="21%"></use>
+                                           <use xlink:href="#star3034" x="41%"></use>
+                                           <use xlink:href="#star3034" x="61%"></use>
+                                           <use xlink:href="#star3034" x="81%"></use>
+                                        </clipPath>
+                                     </defs>
+                                     <rect
+                                        width="100%"
+                                        height="100%"
+                                        clip-path="url(#stars3034)"
+                                        style="fill: rgb(215, 215, 215); stroke: red; stroke-width: 1; height: 100%; width: 100%;"
+                                        ></rect>
+                                     <rect
+                                        width="100%"
+                                        height="100%"
+                                        clip-path="url(#stars3034)"
+                                        style="fill: rgb(251, 131, 43); height: 100%;"
+                                        ></rect>
+                                  </svg>
+                               </span
+                                  >
+                               <span>5.0</span>
+                            </span
+                               >
+                            <span class="scltime">{{
+                            response.user_info.review_on
+                            }}</span>
+                         </span
+                            >
+                         <span class="cmnter-rev-count" style="color:#7e7e7e"
+                            >fffffff</span
+                            >
+                      </span
+                         >
+                      <span class="cel larrow"></span>
+                   </div>
+                   <div></div>
+                </div>
+                <!-- <div class="viewAllRatingsWpr">
+                   <a href="">
+                      <div class="viewAllRatings">View All Ratings</div>
+                   </a>
+                </div> -->
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="listed-in">
+       <div class="container">
+          <p class="more-text-rev">Also Listed In</p>
+          <div class="also-listed-in">
+             <ul>
+                <li
+                *ngFor="let response of responses?.cat_names"
+                (click)="alsoListedclicked($event, response.category_id)"
+                >
+                {{ response.category_name }}
+                </li>
+                <li *ngIf="responses?.cat_names?.length >= 2">...more</li>
+             </ul>
+          </div>
+       </div>
+    </div>
+    <div class="report-issue">
+       <div class="container">
+          <div class="report-sec">
+             <a routerLink="/report/{{listingId}}" routerLinkActive="active">
+                <p class="more-text-rev">
+                   Report An Issue <i class="fas fa-angle-right"></i>
+                </p>
+             </a>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- The Modal -->
+ <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+       <div class="modal-content">
+          <!-- Modal body -->
+          <div class="modal-body">
+             <ul class="model-ul">
+                <li>
+                   <a href="https://www.facebook.com/sharer/sharer.php?u={{url}}" >Facebook</a>
+                </li>
+                <li>
+                   <a href="#">WhatsApp</a>
+                </li>
+                <li>
+                   <a href="#">Copy Link</a>
+                </li>
+                <li>
+                   <a href="#">More Options</a>
+                </li>
+             </ul>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+
+ 

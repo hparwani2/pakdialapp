@@ -1,0 +1,142 @@
+<div class="wrapper" id="appWrapper">
+  <div id="toaster" class="toaster fadeInUpBig dn fadeOutDown">
+    <div id="innertoasterdiv2" class="innertoasterdiv2 dn"></div>
+    <div id="innertoasterdiv" class="innertoasterdiv">Unable to detect location, Please turn on location or type area
+    </div>
+  </div>
+  <div class="hdrUnvrsl">
+    <div id="fixhdrdiv" class="">
+      <header id="headerFixed" class="hdrMain">
+        <div class="hdrfirst ">
+          <div (click)="common.clickableFunction('back')" class="hdrleftWpr"><span class="hdrbkarrow transform11"></span></div>
+          <div class="hdrjdlogoWpr"><span class="hdrjdtext" id="middle_btn">Write a Review</span></div>
+          <div class="hdrightWpr" id="right_wrpr" (click)="common.clickableFunction('notification')">
+            <div id="right_btn">
+              <div class="hdrnoftnWpr"><span class="hdrnoftn transform11"></span></div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="shell">
+    <div style="display: none;">
+      <div match="[object Object]" location="[object Object]" history="[object Object]" route="[object Object]"
+        style="padding-top: 125px;">
+        <div class="loaderwrapper">
+          <div class="spinner"><svg class="ldrbxshdw" version="1" width="48" height="48" viewBox="0 0 28 28">
+              <g class="qp-circular-loader">
+                <path class="qp-circular-loader-path" fill="none"></path>
+              </g>
+            </svg></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="wrpr htldtlswp">
+        <div>
+          <div>
+
+            <div class="cmpnyvw"><span class="cmpnynam">{{responces?.listing?.company_name}}</span></div>
+            <form (ngSubmit)="rateSave()">
+
+            <div class="writeareviw">
+              <div class="writrating">
+                <div class="ratparts overall">
+                  <span class="rattxt">Overall 
+                    <span class="ratnum">({{rate}})</span>
+                  </span>
+                  <span class="ratstars">
+                    <div>
+                        <fieldset class="rating" (click)="ratingGet()">
+                            <input [checked]="rate == 5" type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                            <input [checked]="rate == 4.5" type="radio" id="star4half" name="rating" value="4.5" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                            <input [checked]="rate == 4" type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                            <input [checked]="rate == 3.5" type="radio" id="star3half" name="rating" value="3.5" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                            <input [checked]="rate == 3" type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                            <input [checked]="rate == 2.5" type="radio" id="star2half" name="rating" value="2.5" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                            <input [checked]="rate == 2" type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                            <input [checked]="rate == 1.5" type="radio" id="star1half" name="rating" value="1.5" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                            <input [checked]="rate == 1" type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                            <input [checked]="rate == 0.5" type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                        </fieldset>
+                    </div>
+                  </span>
+                </div>
+                  <div class="displayBlock">
+                    <div class="writtxtarea" id="#name"><span><input name="name"[(ngModel)]="sForm.name" reviewmessage type="text" autocorrect="off" autocapitalize="off"
+                          placeholder="Your Name" class=""></span></div>
+                    <div class="writtxtarea" id="#mobile"><span class="mobstartnum">+91</span>
+                      <div class="yournametxt"><input type="tel" name="mobile" [(ngModel)]="sForm.mobile" maxlength="15" autocorrect="off" autocapitalize="off"
+                          placeholder="Mobile No" class=""></div>
+                    </div>
+                  </div>
+
+                  <div class="writtxtarea" id="#review"><textarea name="revMsg" [(ngModel)]="sForm.reviewmessage" placeholder="Write review" type="text" id="growBox"
+                      autocorrect="off" spellcheck="off" autocomplete="off" autocapitalize="off"></textarea>
+                      <span
+                      class="icon-camera_rating upload"></span>
+                      <input class="icon-camera_rating upload" type="file"  #Image accept="image/*" (change)="handleFileInput($event.target.files)">
+                    </div>
+              </div>
+              <div class="writefacebok">
+                <label class="shrfacbk"><span class="facicn fltleft"><span
+                        class="icon-jd_whitefacebook"></span></span><span class="shrtxt">Share On Facebook</span><input
+                      type="checkbox" id="shareonfb"><span class="icon-tick3 chkotr"></span></label>
+              </div>
+              <div class="writefixedbtn"><button type="submit"class="witebtn">SUBMIT</button></div>
+            </div>
+</form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-proxy" id="footerproxy"></div>
+  <footer id="footerBottom" class="headroomft headroom headroom--top headroom--bottom" style="display: none;">
+    <ul class="cmnftrul">
+      <li class="cmnftract"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
+          viewBox="0 0 16.286 13.939">
+          <g id="ftr-jdlogo" transform="translate(-28.324 -3274.866)">
+            <path id="Forma_1_copy_13"
+              d="M34.64 3276.846a2.49 2.49 0 0 0-.17-1.242 1.28 1.28 0 0 0-1.12-.738 1.305 1.305 0 0 0-1.137.738 2.755 2.755 0 0 0-.17 1.242v7.5c0 1.106-.289 1.669-.883 1.669a1.551 1.551 0 0 1-.8-.33 1.245 1.245 0 0 0-.815-.33 1.291 1.291 0 0 0-1.222 1.4c0 1.146 1.307 2.039 3.005 2.039a3.066 3.066 0 0 0 2.563-1.165 5.413 5.413 0 0 0 .747-3.282z"
+              class="cmnjclr" data-name="Forma 1 copy 13"></path>
+            <path id="ftr-jd-icn"
+              d="M41.919 3279.8a3.146 3.146 0 0 0-2.179-.861 4.1 4.1 0 0 0-2.545 1.011 5.365 5.365 0 0 0-1.648 3.857 5.994 5.994 0 0 0 1.007 3.277 3.709 3.709 0 0 0 3.076 1.723 2.573 2.573 0 0 0 2.325-1.142c.275.786.641 1.086 1.3 1.086.86 0 1.355-.58 1.355-1.573v-10.468a1.993 1.993 0 0 0-.183-1.142 1.322 1.322 0 0 0-2.325 0 2.028 2.028 0 0 0-.183 1.142zm-1.812 1.573c1.044 0 1.831 1.03 1.831 2.359 0 1.348-.787 2.378-1.831 2.378-1.08 0-1.867-1.011-1.867-2.4a2.1 2.1 0 0 1 1.866-2.338z"
+              class="cmndclr"></path>
+          </g>
+        </svg><span class="cmnftrtxt">Search</span></li>
+      <li class=""><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 15.914 15.768">
+          <path id="ftr-social"
+            d="M93.932 3287.7l-.049-.05-.059.032a2.346 2.346 0 0 1-2.967-.857 2.1 2.1 0 0 1-.155-1.61 2.252 2.252 0 0 1 1.013-1.349 2.36 2.36 0 0 1 1.826-.219 2.022 2.022 0 0 1 .849 3.195l-.065.066.065.065a5.68 5.68 0 0 0 6.839 1.151c.084 0 .358.286.428.413l.079-.045-.074.056a.177.177 0 0 1 .006.134.185.185 0 0 1-.093.1 7.772 7.772 0 0 1-3.248.754 6.064 6.064 0 0 1-4.395-1.836zm-1.855-3.182a1.443 1.443 0 1 0 .692-.178 1.428 1.428 0 0 0-.692.177zm11.245 3.122a2.684 2.684 0 0 1-1.125-1.822 1.3 1.3 0 0 1 .239-1.114c.67-.711 1.03-.966 1.517-.966a2.181 2.181 0 0 1 .454.057l.088.019.02-.089a5.63 5.63 0 0 0-2.7-6.365 1.175 1.175 0 0 1 .128-.591.18.18 0 0 1 .247-.054 6.447 6.447 0 0 1 3.187 7l-.016.068.061.033a2.284 2.284 0 0 1 1 1.347 2.1 2.1 0 0 1-.137 1.6 2.259 2.259 0 0 1-1.994 1.1 2.052 2.052 0 0 1-.968-.224zm-.215-2.6a1.435 1.435 0 0 0 1.261 2.121 1.44 1.44 0 0 0 1.265-.747 1.43 1.43 0 0 0-.574-1.946 1.442 1.442 0 0 0-1.952.572zm-11.27-2.681a.178.178 0 0 1-.122-.06.18.18 0 0 1-.043-.128 6.462 6.462 0 0 1 4.647-6.142l.067-.018v-.069a2.335 2.335 0 0 1 2.188-2.172 2.3 2.3 0 0 1 2.187 2.178 2.113 2.113 0 0 1-2.187 2.177 1.9 1.9 0 0 1-1.723-1.284l-.026-.087-.086.025a5.643 5.643 0 0 0-4.316 5.407 1.191 1.191 0 0 1-.571.174l-.02.091zm5.292-6.411a1.44 1.44 0 1 0 1.44-1.435 1.439 1.439 0 0 0-1.439 1.435z"
+            class="cmnftrclr" transform="translate(-90.611 -3273.77)"></path>
+        </svg><span class="cmnftrtxt">Social</span></li>
+      <li class=""><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 15.82 15.55">
+          <path id="video"
+            d="M3.66 15.55a.465.465 0 0 1-.46-.46.458.458 0 0 1 .46-.46h3.85v-1.65H1.96A1.964 1.964 0 0 1 0 11.02V1.96A1.964 1.964 0 0 1 1.96 0h11.9a1.964 1.964 0 0 1 1.96 1.96v9.06a1.964 1.964 0 0 1-1.96 1.96H8.31v1.65h3.85a.465.465 0 0 1 .46.46.459.459 0 0 1-.46.46zM.8 1.96v9.06a1.161 1.161 0 0 0 1.16 1.16h11.9a1.161 1.161 0 0 0 1.16-1.16h.01V1.96A1.161 1.161 0 0 0 13.87.8H1.96A1.161 1.161 0 0 0 .8 1.96zm6.036 6.723a.3.3 0 0 1-.336-.326V4.44a.3.3 0 0 1 .336-.327.55.55 0 0 1 .286.044l3.042 1.917c.25.148.207.324.207.324s.043.175-.207.324L7.122 8.638a.418.418 0 0 1-.218.046z"
+            class="cmnftrclr"></path>
+        </svg><span class="cmnftrred">1</span><span class="cmnftrtxt">Videos</span></li>
+      <li class=""><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 10.539 16.198">
+          <path id="_-e-ftr-voice-icn"
+            d="M160.405 3287.109v2.045h2.837a.405.405 0 1 1 0 .81h-6.485a.405.405 0 1 1 0-.81h2.837v-2.045a5.275 5.275 0 0 1-4.864-5.244.405.405 0 0 1 .811 0 4.459 4.459 0 0 0 8.917 0 .405.405 0 0 1 .811 0 5.261 5.261 0 0 1-4.864 5.244zm2.635-10.307v5.062a3.04 3.04 0 0 1-6.08 0v-5.064a3.04 3.04 0 0 1 6.08 0zm-.811 0a2.229 2.229 0 0 0-4.459 0v5.062a2.229 2.229 0 0 0 4.459 0z"
+            class="cmnftrclr" data-name="-e-ftr-voice-icn" transform="translate(-154.731 -3273.765)"></path>
+        </svg><span class="cmnftrtxt">Voice</span></li>
+      <li class=""><svg version="1.1" id="Layer_1" xmlns="w3.org/2000/svg" x="0px" y="0px" viewBox="8 8 37 37"
+          xml:space="preserve" height="20px" width="20px">
+          <g>
+            <path class="cmnftrclr"
+              d="M27,10c-9.4,0-17,7.6-17,17s7.6,17,17,17s17-7.6,17-17S36.4,10,27,10z M27,42.4c-8.5,0-15.4-6.9-15.4-15.4 S18.5,11.6,27,11.6S42.4,18.5,42.4,27S35.5,42.4,27,42.4z">
+            </path>
+            <path class="cmnftrclr"
+              d="M31.5,20.4H23c-0.5,0-0.8,0.4-0.8,0.7l0,0c0,0.5,0.4,0.8,0.7,0.8l0,0h2.4c1.2,0,2.3,0.8,2.6,2h-5.2 c-0.5,0-0.8,0.5-0.8,1c0,0.5,0.4,0.8,0.7,0.8l0,0h5.5c-0.4,1.2-1.4,2-2.6,2h-2.4c-0.4,0-0.7,0.2-0.8,0.6s0,0.7,0.2,1l6.1,5.9 c0.4,0.4,0.8,0.4,1.2,0c0.4-0.2,0.4-0.7,0.1-1.1c0,0,0,0-0.1-0.1l-4.6-4.4h0.4c2.2,0,4.1-1.6,4.4-3.7h1.7c0.5,0,0.8-0.4,0.8-0.7 l0,0c0-0.5-0.4-0.8-0.8-1h-1.7c-0.1-0.7-0.5-1.4-1-2h2.5c0.5,0,0.8-0.4,0.8-0.7l0,0C32.5,20.8,32,20.4,31.5,20.4z">
+            </path>
+          </g>
+        </svg><span class="cmnftrtxt">Jd Pay</span></li>
+      <li class=""><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="-2 2 18.5 10.469">
+          <path id="ftr-news"
+            d="M227.34 3289.09H215.4a1.281 1.281 0 0 1-1.28-1.28v-11.91a1.281 1.281 0 0 1 1.28-1.28h11.94a1.281 1.281 0 0 1 1.28 1.28v11.91a1.281 1.281 0 0 1-1.28 1.28zm-11.06-13.62a1.281 1.281 0 0 0-1.28 1.28v10.22a1.281 1.281 0 0 0 1.28 1.28h10.22a1.281 1.281 0 0 0 1.28-1.28v-10.22a1.281 1.281 0 0 0-1.28-1.28zm1.91 7.69a.64.64 0 1 1 .661-.64.651.651 0 0 1-.661.64zm6.62-.449h-5.12v-.841h5.12v.84zm-6.62-2.551a.64.64 0 1 1 .661-.64.651.651 0 0 1-.661.64zm6.62-.45h-5.12v-.84h5.12v.839z"
+            class="cmnftrclr" transform="translate(-214.12 -3274.62)"></path>
+        </svg><span class="cmnftrred">1</span><span class="cmnftrtxt">News</span></li>
+    </ul>
+  </footer>
+</div>

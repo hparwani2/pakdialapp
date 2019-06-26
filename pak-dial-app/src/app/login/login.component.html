@@ -1,0 +1,19 @@
+<div class="login-full-wrap">
+    <div class="container">
+      <div class="login-text" routerLink="">
+        <h3>Pak<span>dial</span></h3>
+        <p>Login for a seamless experience</p>
+      </div>
+      <!-- <ngx-alerts></ngx-alerts> -->
+      <form (submit)="login()" class="login-form">
+        <input type="text" class="phn-no" placeholder="Mobile No." [(ngModel)]="credentials.phone" [ngModelOptions]="{standalone: true}">
+        <input type="text" class="ur-name" placeholder="Name" [(ngModel)]="credentials.name" [ngModelOptions]="{standalone: true}">
+        <input type="text" class="ur-name" placeholder="Email" [(ngModel)]="credentials.email" [ngModelOptions]="{standalone: true}">
+        <button class="login-sbmit" type="submit"><i class="fas fa-long-arrow-alt-right"></i></button>
+        <!--<div class="btn-log-reg">
+          <button type="" class="log-in-btn">LogIn</button>
+          <button class="log-in-btn" routerLink="/register" routerLinkActive="active">Register</button>
+        </div>-->
+      </form>
+    </div>
+  </div>

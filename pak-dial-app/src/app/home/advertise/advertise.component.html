@@ -1,0 +1,54 @@
+
+
+<div class="upper-full-wrap">
+    <div class="container">
+      <div class="upper-real-esate">
+        <div class="left-real-esate">
+          <a (click)="common.clickableFunction('back')" routerLinkActive="active"><i class="fas fa-angle-left"></i></a>
+        </div>
+        <div class="center-real-esate">
+          <span>Advertiesment</span>
+        </div>
+        <div class="right-real-esate">
+          <a routerLink="/notification" routerLinkActive="active"><i class="far fa-bell"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="login-full-wrap">
+      <div class="container">
+        <div class="login-text" routerLink="">
+          <h3>Pak<span>dial</span></h3>
+          <p>Register Business</p>
+        </div>
+        <ngx-alerts></ngx-alerts>
+        <form class="login-form" (ngSubmit)="saveData()">
+          <!-- {{free | json}} -->
+          <input [(ngModel)]="free.cname" name="cname" type="text" class="ur-name" placeholder="*Company-name" required>
+          <input [(ngModel)]="free.fname" name="fname" type="text" class="ur-name" placeholder="*First Name" required>
+          <input [(ngModel)]="free.lname" name="lname" type="text" class="ur-name" placeholder="*Last Name" required>
+          <input [(ngModel)]="free.mobile" name="mobile" type="text" class="phn-no" placeholder="*Mobile No." required>
+          <input [(ngModel)]="free.email" name="email" type="text" class="phn-no" placeholder="Email ID" required>
+          <input [(ngModel)]="free.lnum" name="lnum" type="text" class="phn-no" placeholder="Landline no" required>
+          <input [(ngModel)]="free.website" name="website" type="text" class="phn-no" placeholder="Website" required>
+          <input [(ngModel)]="free.m_num" name="m_num" type="text" class="ur-name" placeholder="*Mobile number" required>
+          <input [(ngModel)]="free.l_num" name="l_num" type="text" class="phn-no" placeholder="*Ladline number." required>
+          <input [(ngModel)]="free.std_code" name="std_code" type="text" class="phn-no" placeholder="std_code" required>
+          <input [(ngModel)]="free.service" name="service" type="text" class="phn-no" placeholder="service" required>
+          <input [(ngModel)]="free.city_name" name="city_name" type="text" class="phn-no" placeholder="city_name" required>
+
+          <select [(ngModel)]="free.selected" name="selection" required class="select-city">
+              <option *ngFor="let city of cities?.all_cities">{{city.city_name}}</option>
+          </select> 
+          <button  class="continue-btn" type="submit">Continue</button>
+          <!-- <div class="btn-log-reg">
+            <a routerLink="login"><button class="log-in-btn">LogIn</button></a>
+            <button type="submit" class="log-in-btn">Register</button>
+          </div> -->
+        </form>
+      </div>
+    </div>
+      
+      
+<app-footer></app-footer>

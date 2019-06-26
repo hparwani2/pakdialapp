@@ -1,0 +1,57 @@
+<div class="upper-full-wrap">
+    <div class="container">
+      <div class="upper-real-esate">
+        <div class="left-real-esate">
+          <a (click)="common.clickableFunction('back')" routerLinkActive="active"><i class="fas fa-angle-left"></i></a>
+        </div>
+        <div class="center-real-esate">
+          <span>Report an Error</span>
+        </div>
+        <div class="right-real-esate">
+          <a routerLink="/notification" routerLinkActive="active"><i class="far fa-bell"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="whts-wrong">
+    <div class="container">
+     <p>Whats Wrong ?</p>
+    </div>
+  </div>
+  
+  <form (ngSubmit)="report()">   
+
+  <div class="report-content">
+    <div class="container"> 
+      <ul>
+        <li>
+          <label class="check-boxes">Phone Number
+            <input type="checkbox" [(ngModel)]="formData.phone" name="phone"checked="checked">
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label class="check-boxes">Address
+            <input type="checkbox" [(ngModel)]="formData.address"  name="address">
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label class="check-boxes">This place has closed down
+            <input type="checkbox" [(ngModel)]="formData.place"  name="place">
+            <span class="checkmark"></span>
+          </label>
+        </li>
+      </ul>
+      <div class="comment">
+        <textarea [(ngModel)]="formData.text" name=""rows="4" cols="50" placeholder="Additional Comments (Optional)"></textarea>
+      </div>
+    </div>
+  </div>
+  <ngx-alerts></ngx-alerts>
+  <div class="sbmit">
+    <button class="cus-sbmit" type="submit">Submit</button>
+  </div>
+</form>

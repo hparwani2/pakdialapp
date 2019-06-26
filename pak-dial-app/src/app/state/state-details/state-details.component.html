@@ -1,0 +1,49 @@
+<div class="upper-full-wrap">
+  <div class="container">
+    <div class="upper-real-esate">
+      <div class="left-real-esate">
+        <a class="pointer"(click)="backArrow()" routerLinkActive="active"><i class="fas fa-angle-left"></i></a>
+      </div>
+      <div class="center-real-esate">
+        <span>{{responses?.key_cat_name}}</span>
+      </div>
+      <div class="right-location" (click)="filterData()">
+        <i class="fas fa-filter"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="loaction-section">
+    <div class="inner-loaction-sec pointer!" style="
+    cursor: pointer !important;" *ngFor="let response of responses?.listings" (click)="ItemClicked($event,response.listing_id)">
+      <div class="image-location pointer">
+        <img class="img-fluid" src="http://pakdial.com/{{response.upload_dir}}"  (click)="ItemClicked($event,response.listing_id)">
+      </div>
+      <div class="right-cntent-sec">
+        <h4 (click)="ItemClicked($event,response.listing_id)">{{response.company_name}}</h4>
+        <div class="adress">
+          <p class="loacality">
+            <i class="fas fa-map-marker-alt"></i>
+             {{response.city_name}}
+            <span>{{response.state_name}}</span>
+          </p>
+          <div class="rating">
+            <bar-rating rate="{{response.AVG_RATING}}" [max]="5" ></bar-rating>
+            <span class="rate">{{response.TOTAL_RATING_COUNT}} Ratings</span>            
+          </div>
+          <!-- <ngx-alerts></ngx-alerts> -->
+          <p class="open-now">Open Now</p>
+        </div>
+          <div class="cal-now-btn">
+            <a href="tel:{{response.mobile_no}}">
+              <button class="cal-btn" >
+                <i class="fas fa-phone">
+                </i>
+                  Call
+              </button>
+            </a>
+        </div>
+      </div>
+    </div>
+</div>
